@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Trusting Self Signed Certificates";
+}
+
+<center>
+    <div class="row" style="position: relative">
+        <div class="col-md-12">
+            <h2>Weather status before flight</h2>
+        </div>
+    </div>
+</center>
+
+<br />
+
+<div style="width:90%; margin:0 auto;">
+    <table id="weathertable" class="display" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>City</th>
+                <th>Status</th>
+                <th>Description</th>
+                <th>Avg. Temperature (Celcius)</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<div id="failuretoast" name="failuretoast" class="toast bg-warning" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top:20px; right:20px;">
+    <div class="toast-header">
+        <i class="fas fa-bell"></i>
+        <span class="mr-auto" style="padding-left: 10px;">Action Failed</span>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body">
+        Failed to list the weather data! Please retry later on...
+    </div>
+</div>

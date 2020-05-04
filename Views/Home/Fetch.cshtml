@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Trusting Self Signed Certificates";
+}
+
+@model IEnumerable<TrustingSelfSignedCertificates.Models.Weather>
+
+<center>
+    <div class="row" style="position: relative">
+        <div class="col-md-12">
+            <h2>Weather status before flight</h2>
+        </div>
+    </div>
+</center>
+
+<br/>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>City</th>
+            <th>Status</th>
+            <th>Description</th>
+            <th>Avg. Temperature (Celcius)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (TrustingSelfSignedCertificates.Models.Weather weather in Model)
+        {
+            <tr>
+                <td>@weather.id</td>
+                <td>@weather.name</td>
+                <td>@weather.description</td>
+                <td>@weather.temp</td>
+            </tr>
+        }
+    </tbody>
+</table>
