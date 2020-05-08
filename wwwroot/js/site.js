@@ -26,7 +26,7 @@ $(document).ready(function () {
 });
 
 function handleAjaxError(xhr, textStatus, error) {
-    $('#failuretoast').toast({ delay: 5000 });
+    $('#failuretoast').toast({ delay: 8000 });
     $('#failuretoast').toast('show');
 }
 
